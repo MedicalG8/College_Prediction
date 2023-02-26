@@ -1,0 +1,29 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>College Predictor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center my-5">College Predictor</h1>
+      <form method="POST" action="/">
+        <div class="form-group">
+          <label for="rank">Rank:</label>
+          <input type="text" class="form-control" id="rank" name="rank" placeholder="Enter your rank">
+        </div>
+        <div class="form-group">
+          <label for="category">Category:</label>
+          <select class="form-control" id="category" name="category">
+            <option value="Open">Open</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+            <option value="OBC">OBC</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

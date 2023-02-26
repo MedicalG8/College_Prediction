@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Results</title>
+	<style>
+		body {
+			background-color: #F2F2F2;
+			font-family: Calibri, sans-serif;
+			font-size: 18px;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #FFFFFF;
+			box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+			border-radius: 5px;
+			margin-top: 50px;
+		}
+		.heading {
+			font-size: 36px;
+			font-weight: bold;
+			text-align: center;
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+		.college-list {
+			margin-top: 30px;
+			font-size: 24px;
+			line-height: 1.5;
+		}
+		.college-name {
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		.no-colleges {
+			font-weight: bold;
+			text-align: center;
+			margin-top: 50px;
+			font-size: 28px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="heading">College Predictor Results</h1>
+		{% if colleges %}
+			<p>Your predicted colleges are:</p>
+			<ul class="college-list">
+				{% for college in colleges %}
+					<li class="college-name">{{ college }}</li>
+				{% endfor %}
+			</ul>
+		{% else %}
+			<p class="no-colleges">Sorry, you are not eligible for admission in any colleges.</p>
+		{% endif %}
+	</div>
+</body>
+</html>
